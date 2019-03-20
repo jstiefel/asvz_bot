@@ -41,10 +41,11 @@ def waiting_fct():
         time.sleep(60)
         currentTime = datetime.today()
 
-    while currentTime.minute < enrollmentTime.minute:
-        print("Wait for enrollment to open")
-        time.sleep(30)
-        currentTime = datetime.today()
+    if currentTime.hour == enrollmentTime.hour:
+        while currentTime.minute < enrollmentTime.minute:
+            print("Wait for enrollment to open")
+            time.sleep(30)
+            currentTime = datetime.today()
 	
     return
     
