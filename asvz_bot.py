@@ -76,7 +76,7 @@ def asvz_enroll():
 
         #choose organization:
         organization = driver.find_element_by_xpath("//input[@id='userIdPSelection_iddtext']")
-        organization.send_keys('ETHZ - ETH Zurich')
+        organization.send_keys('ETH Zurich')
         organization.send_keys(u'\ue006')
 
         driver.find_element_by_xpath("//input[@id='username']").send_keys(username)
