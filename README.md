@@ -1,11 +1,11 @@
-# ASVZ Bot - Automatic Enrollment Script
+# ASVZ Bot v1 - Automatic Enrollment Script
 
 
-This is a simple ASVZ (Akademischer Sportverband Zürich) enrollment script for people who always miss the enrollment period of classes as cycling, rowing, etc. It is based on Python with Selenium. Currently, it only works with an ETH Zurich login, but it is quite easy to adapt it to other institutions (which I can't try since I don't have access).
+This is a simple ASVZ (Akademischer Sportverband Zürich) enrollment script v1 for people who always miss the enrollment period of classes as cycling, rowing, etc. It is based on Python with Selenium. Currently, it only works with an ETH Zurich login, but it is quite easy to adapt it to other institutions (which I can't try since I don't have access).
 
 Full instructions to set it up for automatic weekly enrollment are given below.
 
-Works on the current version of the ASVZ website as of March 2019.
+Works on the current version of the ASVZ website as of October 2020.
 
 ## Installation
 
@@ -27,6 +27,14 @@ source asvz_bot_python/bin/activate
 ```
 
 Install Selenium and Firefox webdriver:
+
+```
+pip install --upgrade pip
+pip install selenium geckodriver-autoinstaller
+deactivate
+```
+
+or
 
 ```
 pip install --upgrade pip
@@ -80,4 +88,3 @@ PATH=/usr/local/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/bin/X11
 # m h  dom mon dow   command
 30 21 * * 3 /home/<user>/asvz_bot_python/bin/python /home/<user>/asvz_bot/asvz_bot.py > /home/<user>/asvz_bot/asvz.log 2>&1
 ```
-
