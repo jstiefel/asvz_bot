@@ -1,3 +1,5 @@
+*Hint: With the current changes on the ASVZ website and the special circumstances (lessons are booked out very quickly), this Bot will not succeed anymore out of the box. I'm working on a better version. But feel free to make a PR if you want.*
+
 # ASVZ Bot v1 - Automatic Enrollment Script
 
 
